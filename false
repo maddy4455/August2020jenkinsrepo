@@ -1,0 +1,227 @@
+[1598211154.326][INFO]: Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 27471
+[1598211154.326][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1598211155.124][INFO]: [1bde242141381714b33cf46feb17bb28] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--disable-notifications" ],
+            "extensions": [  ]
+         }
+      } ]
+   },
+   "desiredCapabilities": {
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--disable-notifications" ],
+         "extensions": [  ]
+      }
+   }
+}
+[1598211155.129][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1598211155.130][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1598211155.136][INFO]: Cannot switch to US keyboard layout - some keys may be interpreted incorrectly
+[1598211155.136][INFO]: Launching chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-notifications --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-blink-features=ShadowDOMV0 --enable-logging --load-extension="C:\Windows\TEMP\scoped_dir18360_1218320165\internal" --log-level=0 --no-first-run --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Windows\TEMP\scoped_dir18360_433839002" data:,
+[1598211155.672][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
+[1598211155.682][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1598211157.716][INFO]: [1bde242141381714b33cf46feb17bb28] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": false,
+      "browserName": "chrome",
+      "browserVersion": "84.0.4147.135",
+      "chrome": {
+         "chromedriverVersion": "83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416})",
+         "userDataDir": "C:\\Windows\\TEMP\\scoped_dir18360_433839002"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:59929"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "1bde242141381714b33cf46feb17bb28"
+}
+[1598211157.797][INFO]: [1bde242141381714b33cf46feb17bb28] COMMAND Navigate {
+   "url": "https://www.google.co.in/"
+}
+[1598211157.797][INFO]: Waiting for pending navigations...
+[1598211157.799][INFO]: Done waiting for pending navigations. Status: ok
+[1598211158.031][INFO]: Waiting for pending navigations...
+[1598211158.880][INFO]: Done waiting for pending navigations. Status: ok
+[1598211158.880][INFO]: [1bde242141381714b33cf46feb17bb28] RESPONSE Navigate
+[1598211158.889][INFO]: [1bde242141381714b33cf46feb17bb28] COMMAND MaximizeWindow {
+
+}
+[1598211158.889][INFO]: Waiting for pending navigations...
+[1598211158.890][INFO]: Done waiting for pending navigations. Status: ok
+[1598211158.890][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1598211161.024][INFO]: Waiting for pending navigations...
+[1598211161.024][INFO]: Done waiting for pending navigations. Status: ok
+[1598211161.024][INFO]: [1bde242141381714b33cf46feb17bb28] RESPONSE MaximizeWindow {
+   "height": 784,
+   "width": 1040,
+   "x": -8,
+   "y": -8
+}
+[1598211161.031][INFO]: [1bde242141381714b33cf46feb17bb28] COMMAND SetTimeouts {
+   "implicit": 20000
+}
+[1598211161.031][INFO]: [1bde242141381714b33cf46feb17bb28] RESPONSE SetTimeouts
+[1598211161.039][INFO]: [1bde242141381714b33cf46feb17bb28] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//input[@name='q']"
+}
+[1598211161.039][INFO]: Waiting for pending navigations...
+[1598211161.039][INFO]: Done waiting for pending navigations. Status: ok
+[1598211161.060][INFO]: Waiting for pending navigations...
+[1598211161.061][INFO]: Done waiting for pending navigations. Status: ok
+[1598211161.061][INFO]: [1bde242141381714b33cf46feb17bb28] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "a68cd88f-7457-40a4-bf3d-0960cd1e4afd"
+}
+[1598211161.076][INFO]: [1bde242141381714b33cf46feb17bb28] COMMAND TypeElement {
+   "id": "a68cd88f-7457-40a4-bf3d-0960cd1e4afd",
+   "text": "rajnikanth",
+   "value": [ "r", "a", "j", "n", "i", "k", "a", "n", "t", "h" ]
+}
+[1598211161.076][INFO]: Waiting for pending navigations...
+[1598211161.077][INFO]: Done waiting for pending navigations. Status: ok
+[1598211161.209][INFO]: Waiting for pending navigations...
+[1598211161.210][INFO]: Done waiting for pending navigations. Status: ok
+[1598211161.211][INFO]: [1bde242141381714b33cf46feb17bb28] RESPONSE TypeElement
+[1598211161.216][INFO]: [1bde242141381714b33cf46feb17bb28] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//input[@name='q']"
+}
+[1598211161.216][INFO]: Waiting for pending navigations...
+[1598211161.217][INFO]: Done waiting for pending navigations. Status: ok
+[1598211161.226][INFO]: Waiting for pending navigations...
+[1598211161.227][INFO]: Done waiting for pending navigations. Status: ok
+[1598211161.227][INFO]: [1bde242141381714b33cf46feb17bb28] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "a68cd88f-7457-40a4-bf3d-0960cd1e4afd"
+}
+[1598211161.248][INFO]: [1bde242141381714b33cf46feb17bb28] COMMAND ExecuteScript {
+   "args": [ {
+      "element-6066-11e4-a52e-4f735466cecf": "a68cd88f-7457-40a4-bf3d-0960cd1e4afd"
+   }, "value" ],
+   "script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a..."
+}
+[1598211161.248][INFO]: Waiting for pending navigations...
+[1598211161.316][INFO]: Done waiting for pending navigations. Status: ok
+[1598211161.393][INFO]: Waiting for pending navigations...
+[1598211161.397][INFO]: Done waiting for pending navigations. Status: ok
+[1598211161.397][INFO]: [1bde242141381714b33cf46feb17bb28] RESPONSE ExecuteScript "rajnikanth"
+[1598211161.404][INFO]: [1bde242141381714b33cf46feb17bb28] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//div[@class='FPdoLc tfB0Bf']//input[@name='btnK']"
+}
+[1598211161.404][INFO]: Waiting for pending navigations...
+[1598211161.405][INFO]: Done waiting for pending navigations. Status: ok
+[1598211161.425][INFO]: Waiting for pending navigations...
+[1598211161.429][INFO]: Done waiting for pending navigations. Status: ok
+[1598211161.429][INFO]: [1bde242141381714b33cf46feb17bb28] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "ec774cbc-5f85-4604-b175-45b6023e9e54"
+}
+[1598211161.442][INFO]: [1bde242141381714b33cf46feb17bb28] COMMAND TypeElement {
+   "id": "ec774cbc-5f85-4604-b175-45b6023e9e54",
+   "text": "",
+   "value": [ "" ]
+}
+[1598211161.442][INFO]: Waiting for pending navigations...
+[1598211161.443][INFO]: Done waiting for pending navigations. Status: ok
+[1598211161.548][INFO]: Waiting for pending navigations...
+[1598211163.460][INFO]: Done waiting for pending navigations. Status: ok
+[1598211163.460][INFO]: [1bde242141381714b33cf46feb17bb28] RESPONSE TypeElement
+[1598211163.462][INFO]: [1bde242141381714b33cf46feb17bb28] COMMAND GetTitle {
+
+}
+[1598211163.462][INFO]: Waiting for pending navigations...
+[1598211163.464][INFO]: Done waiting for pending navigations. Status: ok
+[1598211163.467][INFO]: Waiting for pending navigations...
+[1598211163.467][INFO]: Done waiting for pending navigations. Status: ok
+[1598211163.467][INFO]: [1bde242141381714b33cf46feb17bb28] RESPONSE GetTitle "rajnikanth - Google Search"
+[1598211163.479][INFO]: [1bde242141381714b33cf46feb17bb28] COMMAND Screenshot {
+
+}
+[1598211163.480][INFO]: Waiting for pending navigations...
+[1598211163.480][INFO]: Done waiting for pending navigations. Status: ok
+[1598211163.799][INFO]: Waiting for pending navigations...
+[1598211163.801][INFO]: Done waiting for pending navigations. Status: ok
+[1598211163.801][INFO]: [1bde242141381714b33cf46feb17bb28] RESPONSE Screenshot "iVBORw0KGgoAAAANSUhEUgAABAAAAAKJCAYAAAAlclupAAAAAXNSR0IArs4c6QAAIABJREFUeJzs3Xl8U2W+P/DPSdKmC3tXBIpDXcomrRvFDapiZWBGrlUvA3MtInMtg78RvMjFURxmwIEfcAXvHa91BpHys8g4gOiArFpBlCpKWymLS1ELSJsUKIUuaZbz++Ocn..."
+[1598211163.859][INFO]: [1bde242141381714b33cf46feb17bb28] COMMAND Quit {
+
+}
+[1598211163.892][INFO]: [1bde242141381714b33cf46feb17bb28] RESPONSE Quit

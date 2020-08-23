@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="9577" started-at="2020-08-23T13:10:16 MDT" finished-at="2020-08-23T13:10:25 MDT">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="9577" started-at="2020-08-23T13:10:16 MDT" finished-at="2020-08-23T13:10:25 MDT">
+      <class name="gtplBank.gettextTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:gtplBank.gettextTest@536aaa8d]" name="init" is-config="true" duration-ms="130" started-at="2020-08-23T13:10:16 MDT" finished-at="2020-08-23T13:10:16 MDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="register(java.lang.reflect.Method)[pri:0, instance:gtplBank.gettextTest@536aaa8d]" name="register" is-config="true" duration-ms="5" started-at="2020-08-23T13:10:16 MDT" finished-at="2020-08-23T13:10:16 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void gtplBank.gettextTest.f()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+        <test-method status="PASS" signature="f()[pri:0, instance:gtplBank.gettextTest@536aaa8d]" name="f" duration-ms="8101" started-at="2020-08-23T13:10:16 MDT" finished-at="2020-08-23T13:10:24 MDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:gtplBank.gettextTest@536aaa8d]" name="tearDown" is-config="true" duration-ms="1081" started-at="2020-08-23T13:10:24 MDT" finished-at="2020-08-23T13:10:25 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=f status=SUCCESS method=gettextTest.f()[pri:0, instance:gtplBank.gettextTest@536aaa8d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:gtplBank.gettextTest@536aaa8d]" name="cleanUp" is-config="true" duration-ms="229" started-at="2020-08-23T13:10:25 MDT" finished-at="2020-08-23T13:10:25 MDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- gtplBank.gettextTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
