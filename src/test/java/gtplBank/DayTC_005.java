@@ -66,11 +66,11 @@ public class DayTC_005 extends BaseTest{
 		data[0][0] = guruUtil.USER_NAME;
 		data[0][1] = guruUtil.PASSWD;
 		//2nd row
-		data[1][0] = "invalid";
-		data[1][1] = "valid";
+		data[1][0] = "valid";
+		data[1][1] = "invalid";
 		//3rd row
-		data[2][0] = "valid";
-		data[2][1] = "invalid";
+		data[2][0] = "invalid";
+		data[2][1] = "valid";
 		//4th row
 		data[3][0] = "invalid";
 		data[3][1] = "invalid";
