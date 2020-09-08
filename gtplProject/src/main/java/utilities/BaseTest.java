@@ -6,6 +6,8 @@ import java.lang.reflect.Method;
 import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,6 +17,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.ProfilesIni;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -74,10 +77,12 @@ public class BaseTest {
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "false");
 
 			ChromeOptions option = new ChromeOptions();
-			//option.addArguments("user-data-dir=C:\\Users\\yavyo\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1");
+			option.addArguments("user-data-dir=C:\\Users\\yavyo\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1");
 			option.addArguments("--disable-notifications");
 
 			driver = new ChromeDriver(option);
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		} else if (browser.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "C:\\Users\\yavyo\\Desktop\\seleniumproject\\geckodriver.exe");
@@ -88,9 +93,15 @@ public class BaseTest {
 
 			FirefoxOptions option = new FirefoxOptions();
 			option.setProfile(profile);
-
 			driver = new FirefoxDriver(option);
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			
+		}else if (browser.equals("ie")) {
+			System.setProperty("WebDriver.ie.driver", "C:\\Users\\yavyo\\Desktop\\seleniumproject\\IEDriverServer.exe");
+			driver=new InternetExplorerDriver();
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		}
 	}
 
@@ -125,6 +136,7 @@ public class BaseTest {
 			
 			
 		}
+		driver.quit();
 	}
 
 	// to generate random numbers
@@ -140,6 +152,6 @@ public class BaseTest {
 
 		report.flush();
 
-      driver.quit();
+    
 	}
 }
