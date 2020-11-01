@@ -6,16 +6,21 @@ import java.lang.reflect.Method;
 import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.ProfilesIni;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -25,7 +30,6 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-
 
 public class BaseTest {
 
@@ -44,6 +48,7 @@ public class BaseTest {
 	@BeforeTest
 	public void init() throws Exception {
 
+		Reporter.log("=====Browser Session Started=====", true);
 		Date dt = new Date();
 		filePath = dt.toString().replace(':', '_').replace(' ', '_') + ".html";
 
@@ -68,45 +73,47 @@ public class BaseTest {
 			System.setProperty("webdriver.chrome.driver",
 					"\\C:\\Users\\yavyo\\Desktop\\seleniumproject\\chromedriver.exe\\");
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "false");
-
 			ChromeOptions option = new ChromeOptions();
 			option.addArguments("user-data-dir=C:\\Users\\yavyo\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1");
 			option.addArguments("--disable-notifications");
-
 			driver = new ChromeDriver(option);
 
-		} else if (browser.equals("firefox")) {
+		} else if (browser.equals("firefox")) { 
 			System.setProperty("webdriver.gecko.driver", "C:\\Users\\yavyo\\Desktop\\seleniumproject\\geckodriver.exe");
-
 			ProfilesIni p = new ProfilesIni();
 			FirefoxProfile profile = p.getProfile("Marchsel");
 			profile.setPreference("dom.webnotifications.enabled", false);
-
 			FirefoxOptions option = new FirefoxOptions();
 			option.setProfile(profile);
-
 			driver = new FirefoxDriver(option);
-			driver.manage().window().maximize();
 
+		} else if (browser.equals("ie")) {
+			System.setProperty("WebDriver.ie.driver", "C:\\Users\\yavyo\\Desktop\\seleniumproject\\IEDriverServer.exe");
+			driver = new InternetExplorerDriver();
+
+		} else if (browser.equals("edge")) {
+			System.setProperty("webdriver.edge.driver", "C:\\Users\\yavyo\\Desktop\\msedgedriver.exe");
+			driver = new EdgeDriver();
 		}
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
 	}
 
 	@BeforeMethod
 	public void register(Method method) {
 
-		System.out.println("iam Befor Method.....");
 		String testName = method.getName();
 		test = report.createTest(testName);
 
 	}
 
 	@AfterMethod
-	public  void tearDown(ITestResult result) throws IOException, InterruptedException {
+	public void tearDown(ITestResult result) throws IOException, InterruptedException {
 
 		if (result.getStatus() == ITestResult.FAILURE) {
 			test.log(Status.FAIL, "The test method Named as : " + result.getName() + " is Failed");
 			test.log(Status.FAIL, "Test failure : " + result.getThrowable());
-
 			// String temp = Utility.getScreenshot(driver);
 			test.fail(result.getThrowable().getMessage(),
 					MediaEntityBuilder.createScreenCaptureFromBase64String(Utility.getScreenshot(driver)).build());
@@ -120,6 +127,7 @@ public class BaseTest {
 		} else if (result.getStatus() == ITestResult.SKIP) {
 			test.log(Status.SKIP, "The Test Method Named as : " + result.getName() + " is Skipped");
 		}
+		 driver.quit();
 	}
 
 	// to generate random numbers
@@ -131,12 +139,11 @@ public class BaseTest {
 	}
 
 	@AfterTest
-	public void cleanUp()  {
+	public void cleanUp() {
 
 		report.flush();
-
-		//Thread.sleep(2000);
-		driver.close();
+		Reporter.log("=====Browser Session Ended=====", true);
+		//driver.quit();
 
 	}
 }
