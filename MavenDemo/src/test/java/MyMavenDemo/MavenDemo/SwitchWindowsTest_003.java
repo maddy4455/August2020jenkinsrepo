@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+
+import baseClass.BaseTest;
 
 public class SwitchWindowsTest_003 extends BaseTest {
 
@@ -33,7 +36,7 @@ public class SwitchWindowsTest_003 extends BaseTest {
 		driver.findElement(By.id("email")).sendKeys("hello world");
 
 		Thread.sleep(2000);
-		// driver.close();
+		
 	}
 
 	@Test(dependsOnMethods = "switchTest2")
@@ -47,11 +50,13 @@ public class SwitchWindowsTest_003 extends BaseTest {
 		driver.switchTo().window((String) tabs.get(1));
 
 		System.out.println("1 window title is " + driver.getTitle());
-		driver.findElement(By.id("uh-search-box")).sendKeys("inception");
-		driver.findElement(By.xpath("//i[@class='Fz(26px) Mstart(2px) Icon-Fp2 IconNavSearch Icon-Fp2']")).click();
+		WebElement searchBox = driver.findElement(By.cssSelector("input#header-search-input"));
+		searchBox.sendKeys("inception");
+		searchBox.submit();
+	//	driver.findElement(By.xpath("//i[@class='Fz(26px) Mstart(2px) Icon-Fp2 IconNavSearch Icon-Fp2']")).click();
 
 		Thread.sleep(2000);
-		// driver.close();
+		
 	}
 
 	@Test(dependsOnMethods = "switchTest3")
@@ -68,7 +73,7 @@ public class SwitchWindowsTest_003 extends BaseTest {
 		driver.findElement(By.xpath("//div[@class='hpuQDe']//*[local-name()='svg']")).click();
 
 		Thread.sleep(2000);
-		// driver.close();
+		
 	}
 
 	@Test(dependsOnMethods = "switchTest4")
@@ -85,7 +90,7 @@ public class SwitchWindowsTest_003 extends BaseTest {
 		driver.findElement(By.xpath("//a[@class='profile-link']")).click();
 
 		Thread.sleep(2000);
-		// driver.close();
+		
 
 	}
 }

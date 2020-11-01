@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import baseClass.BaseTest;
+
 public class SwithFramesTest extends BaseTest {
   @Test
   public void SwitchFrameTest() 

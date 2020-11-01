@@ -7,13 +7,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import baseClass.BaseTest;
+
 public class MouseHover_Test extends BaseTest {
 	@Test
 	public void MouseDemo_Test() throws InterruptedException {
 
 		openBrowser("chrome");
-
-		driver.manage().window().maximize();
 
 		driver.get("http://seleniumpractise.blogspot.com/2016/08/how-to-perform-mouse-hover-in-selenium.html");
 

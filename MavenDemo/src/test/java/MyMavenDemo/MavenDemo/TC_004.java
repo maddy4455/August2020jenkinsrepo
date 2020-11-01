@@ -1,66 +1,33 @@
 package MyMavenDemo.MavenDemo;
 
 import org.testng.annotations.Test;
-
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
+import baseClass.BaseTest;
 
-
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
-
-import java.io.FileNotFoundException;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
 
-public class TC_004 extends BaseTest{
-	
-	 @BeforeMethod(groups = {"Regression","sanity"})
-	 @Parameters("browser")
-	  public void beforeMethod(String bType) throws FileNotFoundException {
-		 init();
-		  
-		  htmlReporter = new ExtentHtmlReporter("./Reports/extent9.html");
-		  report = new ExtentReports(); // this class generate the reports
-		  report.attachReporter(htmlReporter);
-		  logger = report.createTest("RadioButtonFB", "Radio Button test");
-		  
-		  openBrowser(bType);
-			logger.log(Status.INFO, "launching chromebrowser");
-			
-	    
-			
-		  System.out.println("beforeMethod");
-	  }
-	 
-  @Test (groups = {"Regression","sanity"})
-  public void RadioButtonFB() {
-	  
-	   
+public class TC_004 extends BaseTest {
+
+	@Test(groups = { "Regression", "sanity" })
+	@Parameters("browser")
+	public void RadioButtonFB(String bType) {
+
+		openBrowser(bType);
+		test.log(Status.INFO, "launching browser " + bType);
+
 		driver.get("https://www.facebook.com/");
-		logger.log(Status.INFO, "Navigate to facebook url");
-	 
-	  driver.findElement(By.id("u_0_7")).click();
-	  logger.log(Status.INFO, "find the element and clicked");
-	  
-	  System.out.println("RadioButtonFB");
-  }
- 
+		String url = driver.getCurrentUrl();
+		test.log(Status.INFO, "Navigating url " + url);
 
-  @AfterMethod(groups = {"Regression","sanity"})
-  public void endProcess() {
-	  
-	 
-	  report.flush();
-	  driver.quit();
-	  
-	  System.out.println("afterMethod");
-  }
+		driver.findElement(By.id("u_0_7")).click();
+		test.log(Status.INFO, "find the login button and clicked");
+		
+		driver.findElement(By.xpath("//button[@id='u_0_12']")).click();
+		test.log(Status.INFO, "clicked on Sign Up button");
+		
+	
+	}
 
 }

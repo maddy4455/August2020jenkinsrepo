@@ -1,25 +1,26 @@
 package MyMavenDemo.MavenDemo;
 
-import java.io.FileNotFoundException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import baseClass.BaseTest;
+
 public class Assert_Test extends BaseTest{
   @Test
-  public void Assert_Test() throws FileNotFoundException {
-	  
-	  init();
+  public void AssertTest() {
 	  
 	  openBrowser("chrome");
 		
 		driver.get("https://www.amazon.in/");
 		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 		//String actLink = driver.findElement(By.linkText("Books")).getText();
-	String actLink = driver.findElement(By.linkText("Books")).getAttribute("innerHTML");
-	String expLink = "Book";
+	String actLink = driver.findElement(By.linkText("Mobiles")).getAttribute("innerHTML");
+	String expLink = "Mobiles";
 	
 	System.out.println("actual link :" +actLink);
 	System.out.println("expexted link :"+ expLink);
@@ -30,15 +31,14 @@ public class Assert_Test extends BaseTest{
 	
 	SoftAssert s=new SoftAssert();
 	
-	s.assertTrue(actLink.equals(expLink), "both links are not equal");
-	s.assertTrue(false, "err1");
-	s.assertTrue(true, "err2");
-	s.assertTrue(false, "err23");
+	s.assertTrue(actLink.equals(expLink), "both links are  equal");
+	//s.assertTrue(false, "err1");
+	//s.assertTrue(true, "err2");
+	//s.assertTrue(false, "err3");
 	
-	driver.findElement(By.id("twotabsearchtextbox")).sendKeys("twotabsearchtextbox");
+	//s.assertAll();
+
 	
-	s.assertAll();
-	driver.quit();
 	  
   }
 }
