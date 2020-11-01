@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="jenkins_Test">
     <classes>
-      <class name="jenkinsDemo.TC_001"/>
+      <class name="MyMavenDemo.MavenDemo.Assert_Test"/>
     </classes>
   </test> <!-- jenkins_Test -->
 </suite> <!-- Suite -->

@@ -3,7 +3,8 @@ package jenkinsDemo;
 import java.io.FileNotFoundException;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-import MyMavenDemo.MavenDemo.BaseTest;
+
+import baseClass.BaseTest;
 
 
 public class TC_001 extends BaseTest{
@@ -11,7 +12,6 @@ public class TC_001 extends BaseTest{
   @Test
   public void FBLogin() throws FileNotFoundException {
 	  
-	  init();
 	  
 	 
 	  
@@ -24,6 +24,6 @@ public class TC_001 extends BaseTest{
 	  driver.findElement(By.id("u_0_b")).click();
 	  
 	  
-	  driver.quit();
+	  //driver.quit();
   }
 }

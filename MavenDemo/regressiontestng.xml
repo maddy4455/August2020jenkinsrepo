@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="regressionSuite">
+<suite name="regressionSuiteS">
   <test thread-count="5" name="FirefoxResgressionTest">
   <parameter name="browser" value="firefox"></parameter>
     <classes>

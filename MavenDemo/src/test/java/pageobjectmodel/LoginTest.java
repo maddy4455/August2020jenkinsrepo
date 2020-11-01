@@ -1,13 +1,11 @@
 package pageobjectmodel;
 
-import java.util.concurrent.TimeUnit;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 
-import MyMavenDemo.MavenDemo.BaseTest;
+import baseClass.BaseTest;
 
 public class LoginTest extends BaseTest 
 {
@@ -19,8 +17,8 @@ public class LoginTest extends BaseTest
 		  test.log(Status.INFO, "initializing chrome browser");
 		  
 			driver.get("http://automationpractice.com/index.php");
-			test.log(Status.INFO, "Launching the website :- " + "http://automationpractice.com/index.php");
-			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+			String Url = driver.getCurrentUrl();
+			test.log(Status.INFO, "Launching the website :- " + Url);
 			
 			CustomerRegistration c=new CustomerRegistration(driver);
 			c.CustomerRegistrationPage();
@@ -33,11 +31,11 @@ public class LoginTest extends BaseTest
 			System.out.println("The actual page title is :- " + actTitle);
 		  test.log(Status.PASS, "verified the page title :-" + actTitle);
 		  
-		  //driver.quit();
+		  
 	  }
 
 
-	@Test (enabled=false)
+	@Test (enabled=true)
 	public void Logintest() throws Exception {
 
 		openBrowser("chrome");
@@ -45,7 +43,6 @@ public class LoginTest extends BaseTest
 		 
 		driver.get("http://automationpractice.com/index.php");
 		test.log(Status.INFO, "Launching the website :- " + "http://automationpractice.com/index.php");
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		
 		LoginPage p = new LoginPage(driver);
 		p.customerLogin();
@@ -54,6 +51,6 @@ public class LoginTest extends BaseTest
 		Assert.assertEquals(p.verifyError(), expMsg);
 		test.log(Status.PASS, "Verified error message :- "+ expMsg);
 		
-		driver.quit();
+	
 	}
 }

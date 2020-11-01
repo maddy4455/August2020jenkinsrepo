@@ -24,7 +24,7 @@ public class LoginPage
 		
 		signIn.click();
 		
-		customerEmail.sendKeys("qa6754466@gmail.com");
+		customerEmail.sendKeys("qa67548966@gmail.com");
 		customerPassword.sendKeys("password");
 		submitLogin.click();
 			

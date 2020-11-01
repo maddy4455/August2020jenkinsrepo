@@ -1,17 +1,246 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
+    <line>
+      <![CDATA[=====Browser Session Started=====]]>
+    </line>
+    <line>
+      <![CDATA[=====Browser Session Ended=====]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8858" started-at="2020-06-10T10:34:56 MDT" finished-at="2020-06-10T10:35:05 MDT">
+  <suite name="Default suite" duration-ms="77259" started-at="2020-10-31T12:49:14 MDT" finished-at="2020-10-31T12:50:31 MDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="8858" started-at="2020-06-10T10:34:56 MDT" finished-at="2020-06-10T10:35:05 MDT">
-      <class name="jenkinsDemo.TC_001">
-        <test-method status="PASS" signature="FBLogin()[pri:0, instance:jenkinsDemo.TC_001@853265]" name="FBLogin" duration-ms="8763" started-at="2020-06-10T10:34:56 MDT" finished-at="2020-06-10T10:35:05 MDT">
+    <test name="Default test" duration-ms="77259" started-at="2020-10-31T12:49:14 MDT" finished-at="2020-10-31T12:50:31 MDT">
+      <class name="parameters.DataProviderClasslevel_Test2">
+        <test-method status="PASS" signature="init()[pri:0, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="init" is-config="true" duration-ms="144" started-at="2020-10-31T12:49:14 MDT" finished-at="2020-10-31T12:49:14 MDT">
+          <reporter-output>
+            <line>
+              <![CDATA[=====Browser Session Started=====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="register(java.lang.reflect.Method)[pri:0, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="register" is-config="true" duration-ms="4" started-at="2020-10-31T12:49:14 MDT" finished-at="2020-10-31T12:49:14 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void parameters.DataProviderClasslevel_Test2.testMethodA(java.lang.String,java.lang.String) throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- FBLogin -->
-      </class> <!-- jenkinsDemo.TC_001 -->
+        </test-method> <!-- register -->
+        <test-method status="PASS" signature="testMethodA(java.lang.String, java.lang.String)[pri:1, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="testMethodA" duration-ms="10958" started-at="2020-10-31T12:49:14 MDT" data-provider="SearchProvider" finished-at="2020-10-31T12:49:25 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Guru99]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[India]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodA -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="tearDown" is-config="true" duration-ms="1146" started-at="2020-10-31T12:49:25 MDT" finished-at="2020-10-31T12:49:26 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMethodA status=SUCCESS method=DataProviderClasslevel_Test2.testMethodA(java.lang.String, java.lang.String)[pri:1, instance:parameters.DataProviderClasslevel_Test2@37d31475] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="register(java.lang.reflect.Method)[pri:0, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="register" is-config="true" duration-ms="1" started-at="2020-10-31T12:49:26 MDT" finished-at="2020-10-31T12:49:26 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void parameters.DataProviderClasslevel_Test2.testMethodA(java.lang.String,java.lang.String) throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+        <test-method status="PASS" signature="testMethodA(java.lang.String, java.lang.String)[pri:1, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="testMethodA" duration-ms="10904" started-at="2020-10-31T12:49:26 MDT" data-provider="SearchProvider" finished-at="2020-10-31T12:49:37 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Krishna]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[UK]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodA -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="tearDown" is-config="true" duration-ms="1306" started-at="2020-10-31T12:49:37 MDT" finished-at="2020-10-31T12:49:38 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMethodA status=SUCCESS method=DataProviderClasslevel_Test2.testMethodA(java.lang.String, java.lang.String)[pri:1, instance:parameters.DataProviderClasslevel_Test2@37d31475] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="register(java.lang.reflect.Method)[pri:0, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="register" is-config="true" duration-ms="1" started-at="2020-10-31T12:49:38 MDT" finished-at="2020-10-31T12:49:38 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void parameters.DataProviderClasslevel_Test2.testMethodA(java.lang.String,java.lang.String) throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+        <test-method status="PASS" signature="testMethodA(java.lang.String, java.lang.String)[pri:1, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="testMethodA" duration-ms="10967" started-at="2020-10-31T12:49:38 MDT" data-provider="SearchProvider" finished-at="2020-10-31T12:49:49 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bhupesh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[USA]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodA -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="tearDown" is-config="true" duration-ms="1426" started-at="2020-10-31T12:49:49 MDT" finished-at="2020-10-31T12:49:51 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMethodA status=SUCCESS method=DataProviderClasslevel_Test2.testMethodA(java.lang.String, java.lang.String)[pri:1, instance:parameters.DataProviderClasslevel_Test2@37d31475] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="register(java.lang.reflect.Method)[pri:0, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="register" is-config="true" duration-ms="1" started-at="2020-10-31T12:49:51 MDT" finished-at="2020-10-31T12:49:51 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void parameters.DataProviderClasslevel_Test2.testMethodB(java.lang.String) throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+        <test-method status="PASS" signature="testMethodB(java.lang.String)[pri:2, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="testMethodB" duration-ms="11907" started-at="2020-10-31T12:49:51 MDT" data-provider="SearchProvider" finished-at="2020-10-31T12:50:03 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Canada]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodB -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="tearDown" is-config="true" duration-ms="1381" started-at="2020-10-31T12:50:03 MDT" finished-at="2020-10-31T12:50:04 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMethodB status=SUCCESS method=DataProviderClasslevel_Test2.testMethodB(java.lang.String)[pri:2, instance:parameters.DataProviderClasslevel_Test2@37d31475] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="register(java.lang.reflect.Method)[pri:0, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="register" is-config="true" duration-ms="1" started-at="2020-10-31T12:50:04 MDT" finished-at="2020-10-31T12:50:04 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void parameters.DataProviderClasslevel_Test2.testMethodB(java.lang.String) throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+        <test-method status="PASS" signature="testMethodB(java.lang.String)[pri:2, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="testMethodB" duration-ms="11878" started-at="2020-10-31T12:50:04 MDT" data-provider="SearchProvider" finished-at="2020-10-31T12:50:16 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Russia]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodB -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="tearDown" is-config="true" duration-ms="1426" started-at="2020-10-31T12:50:16 MDT" finished-at="2020-10-31T12:50:17 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMethodB status=SUCCESS method=DataProviderClasslevel_Test2.testMethodB(java.lang.String)[pri:2, instance:parameters.DataProviderClasslevel_Test2@37d31475] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="register(java.lang.reflect.Method)[pri:0, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="register" is-config="true" duration-ms="1" started-at="2020-10-31T12:50:17 MDT" finished-at="2020-10-31T12:50:17 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void parameters.DataProviderClasslevel_Test2.testMethodB(java.lang.String) throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+        <test-method status="PASS" signature="testMethodB(java.lang.String)[pri:2, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="testMethodB" duration-ms="11517" started-at="2020-10-31T12:50:17 MDT" data-provider="SearchProvider" finished-at="2020-10-31T12:50:29 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Japan]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodB -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="tearDown" is-config="true" duration-ms="1488" started-at="2020-10-31T12:50:29 MDT" finished-at="2020-10-31T12:50:30 MDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMethodB status=SUCCESS method=DataProviderClasslevel_Test2.testMethodB(java.lang.String)[pri:2, instance:parameters.DataProviderClasslevel_Test2@37d31475] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:parameters.DataProviderClasslevel_Test2@37d31475]" name="cleanUp" is-config="true" duration-ms="737" started-at="2020-10-31T12:50:30 MDT" finished-at="2020-10-31T12:50:31 MDT">
+          <reporter-output>
+            <line>
+              <![CDATA[=====Browser Session Ended=====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- parameters.DataProviderClasslevel_Test2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

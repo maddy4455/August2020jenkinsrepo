@@ -6,6 +6,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="resources"/>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
 			<attribute name="test" value="true"/>
@@ -24,5 +25,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/yavyo/.p2/pool/plugins/org.testng_7.2.0.r202003151902.jar" sourcepath="C:/Users/yavyo/.p2/pool/plugins/org.testng.source_7.2.0.r202003151902.jar"/>
+	<classpathentry kind="lib" path="C:/Users/yavyo/Desktop/seleniumproject/sikulixapi-2.0.4.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

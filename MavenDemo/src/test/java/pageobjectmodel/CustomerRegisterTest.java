@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 
-import MyMavenDemo.MavenDemo.BaseTest;
+import baseClass.BaseTest;
 
 public class CustomerRegisterTest extends BaseTest {
   @Test
@@ -30,6 +30,5 @@ public class CustomerRegisterTest extends BaseTest {
 		System.out.println("The actual page title is :- " + actTitle);
 	  test.log(Status.PASS, "verified the page title :-" + actTitle);
 	  
-	  driver.quit();
   }
 }

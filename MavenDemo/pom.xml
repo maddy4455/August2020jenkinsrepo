@@ -122,6 +122,29 @@
 			<artifactId>jira-client</artifactId>
 			<version>0.5</version>
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-email</artifactId>
+			<version>1.5</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
+		<dependency>
+			<groupId>net.sourceforge.tess4j</groupId>
+			<artifactId>tess4j</artifactId>
+			<version>4.5.1</version>
+		</dependency>
+ <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+             <artifactId>json-simple</artifactId>
+             <version>1.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.browserstack/browserstack-local-java -->
+<dependency>
+    <groupId>com.browserstack</groupId>
+    <artifactId>browserstack-local-java</artifactId>
+    <version>1.0.3</version>
+</dependency>
+    
 	</dependencies>
 </project>
